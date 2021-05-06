@@ -11,6 +11,12 @@
     "npm",
     "deployment"
   ],
+  "homepage": "https://github.com/Roslovets-Inc/zip-npm-files",
+  "bugs": "https://github.com/Roslovets-Inc/zip-npm-files/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roslovets-Inc/zip-npm-files.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
