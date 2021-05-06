@@ -1,15 +1,28 @@
 {
-  "name": "zipaction",
+  "name": "zip-npm-files",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Zip specific files of npm project for deployment and distribution",
+  "author": "Pavel Roslovets (https://github.com/roslovets)",
+  "private": false,
+  "keywords": [
+    "action",
+    "github",
+    "zip",
+    "npm",
+    "deployment"
+  ],
+  "main": "src/index.js",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt"
+    "start": "node src/index.js",
+    "build": "ncc build src/index.js --license licenses.txt",
+    "postversion": "cross-var git add package.json package-lock.json && git commit -mv%npm_package_version% && git push"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.7",
-    "@actions/github": "^4.0.0"
+    "bestzip": "^2.2.0"
+  },
+  "devDependencies": {
+    "cross-var": "^1.1.0"
   }
 }
